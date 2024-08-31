@@ -32,7 +32,8 @@
 
         function displayKeys(keys) {
             const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = keys.map((key, index) => `<p>Chave ${index + 1}: ${key}</p>`).join('');
+            resultsContainer.innerHTML = keys.map((key, index) => resultsContainer.innerHTML = keys.map(key => `<p>${key}</p>`).join('');
+
         }
 
         function searchKey() {
