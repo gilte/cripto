@@ -21,7 +21,7 @@
             }
 
             generatedKeys = [];
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 1; i++) {
                 const keyInput = baseKey + i;
                 const hash = CryptoJS.SHA256(keyInput).toString(CryptoJS.enc.Hex);
                 generatedKeys.push(hash.toUpperCase());
@@ -38,7 +38,7 @@
 
         function searchKey() {
             const searchIndex = parseInt(document.getElementById('searchIndex').value);
-            if (isNaN(searchIndex) || searchIndex < 1 || searchIndex > 10) {
+            if (isNaN(searchIndex) || searchIndex < 1 || searchIndex > 1) {
                 document.getElementById('searchResult').innerText = 'Índice inválido. Por favor, insira um número entre 1 e 10.';
                 return;
             }
@@ -52,8 +52,8 @@
 <body>
 
     <h2>Buscar Chave Específica</h2>
-    <label for="searchIndex">Índice da Chave (1-10):</label>
-    <input type="number" id="searchIndex" min="1" max="10">
+    <label for="searchIndex">Índice da Chave (1-1):</label>
+    <input type="number" id="searchIndex" min="1" max="1">
     <button onclick="searchKey()">Buscar Chave</button>
     <div id="searchResult"></div>
     <h1>Gerar Chaves Determinísticas</h1>
